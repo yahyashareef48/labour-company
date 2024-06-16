@@ -10,7 +10,7 @@ export default function Home() {
       >
         <div className="max-w-7xl w-full m-auto text-white px-4">
           <div className="flex flex-col items-center">
-            <h1 className="text-4xl font-bold">
+            <h1 className="text-4xl font-bold text-center">
               Your One-Stop Solution for{" "}
               <span className="text-[#ffe101]">All Types of Labour Needs</span>
             </h1>
