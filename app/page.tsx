@@ -1,9 +1,19 @@
+import dynamic from "next/dynamic";
+
 import Link from "next/link";
 import MagicButton from "./components/ui/MagicButton";
 
+const Services = dynamic(() => import("./components/Services"), {
+  loading: () => (
+    <div className="min-h-96 flex items-center">
+      <p className="text-center w-full">Loading...</p>
+    </div>
+  ),
+});
+
 export default function Home() {
   return (
-    <main>
+    <main className="dark">
       <section
         id="above-the-fold"
         className="bg-[#00000060] bg-[url('/hero-bg.webp')] bg-center bg-no-repeat min-h-[600px] bg-cover bg-blend-multiply flex items-center transition-all"
@@ -26,6 +36,10 @@ export default function Home() {
             </Link>
           </div>
         </div>
+      </section>
+
+      <section className="bg-gray-900">
+        <Services />
       </section>
     </main>
   );
