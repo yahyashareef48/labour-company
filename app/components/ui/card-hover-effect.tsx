@@ -12,13 +12,19 @@ export const HoverEffect = ({
   items: {
     title: string;
     description: string;
+    icon?: React.ReactNode;
   }[];
   className?: string;
 }) => {
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <div className={cn("grid grid-cols-1 md:grid-cols-2 max-w-screen-xl mx-auto", className)}>
+    <div
+      className={cn(
+        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-screen-xl mx-auto",
+        className
+      )}
+    >
       {items.map((item, idx) => (
         <div
           key={item?.title}
@@ -44,6 +50,7 @@ export const HoverEffect = ({
             )}
           </AnimatePresence>
           <Card>
+            {item.icon ?? item.icon}
             <CardTitle>{item.title}</CardTitle>
             <CardDescription>{item.description}</CardDescription>
           </Card>
@@ -92,7 +99,7 @@ export const CardDescription = ({
   children: React.ReactNode;
 }) => {
   return (
-    <p className={cn("mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm", className)}>
+    <p className={cn("mt-4 text-zinc-400 tracking-wide leading-relaxed text-sm", className)}>
       {children}
     </p>
   );
