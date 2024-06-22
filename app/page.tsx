@@ -2,9 +2,16 @@ import dynamic from "next/dynamic";
 
 import Link from "next/link";
 import MagicButton from "./components/ui/MagicButton";
-import AboutUs from "./components/AboutUs";
 
 const Services = dynamic(() => import("./components/Services"), {
+  loading: () => (
+    <div className="min-h-96 flex items-center">
+      <p className="text-center w-full">Loading...</p>
+    </div>
+  ),
+});
+
+const AboutUs = dynamic(() => import("./components/AboutUs"), {
   loading: () => (
     <div className="min-h-96 flex items-center">
       <p className="text-center w-full">Loading...</p>
