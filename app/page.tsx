@@ -2,6 +2,7 @@ import dynamic from "next/dynamic";
 
 import Link from "next/link";
 import MagicButton from "./components/ui/MagicButton";
+import AboutUs from "./components/AboutUs";
 
 const Services = dynamic(() => import("./components/Services"), {
   loading: () => (
@@ -32,14 +33,18 @@ export default function Home() {
               deadlines.
             </p>
             <Link href="#contact" className="w-full md:w-60">
-              <MagicButton title="Contact us" />
+              <MagicButton title="Contact Us" />
             </Link>
           </div>
         </div>
       </section>
 
-      <section className="bg-gray-900">
+      <section id="services" className="bg-gray-900">
         <Services />
+      </section>
+
+      <section id="about-us" className="bg-gray-950">
+        <AboutUs />
       </section>
     </main>
   );
