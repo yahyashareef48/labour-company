@@ -1,3 +1,6 @@
+import Link from "next/link";
+import MagicButton from "./ui/MagicButton";
+
 export default function Services() {
   return (
     <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
@@ -237,6 +240,12 @@ export default function Services() {
             </li>
           </ul>
         </div>
+      </div>
+
+      <div className="flex justify-center lg:my-6 my-4">
+        <Link href="#contact" className="w-full md:w-60">
+          <MagicButton title="Contact Us" />
+        </Link>
       </div>
     </div>
   );
