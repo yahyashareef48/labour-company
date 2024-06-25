@@ -1,20 +1,19 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
 import { FaFacebook } from "react-icons/fa";
-import { FaX, FaXTwitter } from "react-icons/fa6";
+import { FaXTwitter } from "react-icons/fa6";
 import { ImInstagram } from "react-icons/im";
 
 export default function Contact() {
+  const [emailCopied, setEmailCopied] = useState(false);
+  const [numberCopied, setNumberCopied] = useState(false);
+
   const copyText = (textToCopy: string) => {
-    navigator.clipboard
-      .writeText(textToCopy)
-      .then(() => {
-        alert("Text copied to clipboard!");
-      })
-      .catch((err) => {
-        alert("Failed to copy");
-      });
+    navigator.clipboard.writeText(textToCopy).catch((err) => {
+      alert("Failed to copy");
+    });
   };
 
   return (
@@ -75,9 +74,15 @@ export default function Contact() {
                 </p>
                 <button
                   className="mt-3 bg-[rgb(79,70,229)] py-1 px-2 rounded"
-                  onClick={() => copyText("contact@labour.company")}
+                  onClick={() => {
+                    copyText("contact@labour.company");
+                    setEmailCopied(true);
+                    setTimeout(() => {
+                      setEmailCopied(false);
+                    }, 5000);
+                  }}
                 >
-                  Copy Email
+                  {emailCopied ? "Email Copied" : "Copy Email"}
                 </button>
               </div>
               <div className="rounded-2xl w-full p-6 max-h-fit overflow-hidden bg-gray-800">
@@ -121,9 +126,15 @@ export default function Contact() {
                 </p>
                 <button
                   className="mt-3 bg-[rgb(79,70,229)] py-1 px-2 rounded"
-                  onClick={() => copyText("+91 8019322468")}
+                  onClick={() => {
+                    copyText("+91 8019322468");
+                    setNumberCopied(true);
+                    setTimeout(() => {
+                      setNumberCopied(false);
+                    }, 5000);
+                  }}
                 >
-                  Copy Number
+                  {numberCopied ? "Number Copied" : "Copy Number"}
                 </button>
               </div>
               <div className="rounded-2xl w-full p-6 overflow-hidden bg-gray-800">
