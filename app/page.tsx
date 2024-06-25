@@ -27,6 +27,14 @@ const Testimonials = dynamic(() => import("./components/Testimonials"), {
   ),
 });
 
+const Contact = dynamic(() => import("./components/Contact"), {
+  loading: () => (
+    <div className="min-h-96 flex items-center">
+      <p className="text-center w-full">Loading...</p>
+    </div>
+  ),
+});
+
 export default function Home() {
   return (
     <main className="dark">
@@ -64,6 +72,10 @@ export default function Home() {
 
       <section id="reviews" className="bg-gray-900 lg:px-6 px-4 py-8 lg:py-16">
         <Testimonials />
+      </section>
+
+      <section id="contact" className="bg-gray-950 lg:px-6 px-4 py-8 lg:py-16">
+        <Contact />
       </section>
     </main>
   );
