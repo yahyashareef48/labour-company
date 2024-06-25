@@ -32,16 +32,19 @@ export default function Contact() {
 
         <div>
           <div className="flex gap-4 flex-col md:flex-row">
-            <div className="rounded-2xl w-full p-6 overflow-hidden bg-gray-800">
-              <h3 className="text-zinc-100 font-bold tracking-wide">
-                Looking for Manpower, Laborers, or Suppliers?
-              </h3>
-              <p className="mt-2 text-zinc-400 tracking-wide leading-relaxed text-sm">
-                Need Reliable Labor Contractors?
-              </p>
-              <p className="mt-1 text-zinc-400 tracking-wide leading-relaxed text-sm">
-                No Registration Charges. It's Free!
-              </p>
+            <div className="rounded-2xl w-full p-6 overflow-hidden bg-gray-800 flex flex-col justify-between">
+              <div>
+                <h3 className="text-zinc-100 font-bold tracking-wide">
+                  Looking for Manpower, Laborers, or Suppliers?
+                </h3>
+                <p className="mt-2 text-zinc-400 tracking-wide leading-relaxed text-sm">
+                  Need Reliable Labor Contractors?
+                </p>
+                <p className="mt-1 text-zinc-400 tracking-wide leading-relaxed text-sm">
+                  No Registration Charges. It's Free!
+                </p>
+              </div>
+
               <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdYf3CBFcNRKmTxEORQsgw01HQwE80_gWwRxlXunp2QMVRNYQ/viewform?usp=send_form">
                 <button className="mt-3 bg-[rgb(79,70,229)] py-1 px-2 rounded">
                   REGISTER NOW FOR FREE
@@ -50,15 +53,18 @@ export default function Contact() {
             </div>
 
             <div className="rounded-2xl w-full p-6 overflow-hidden bg-gray-800">
-              <h3 className="text-zinc-100 font-bold tracking-wide">
-                Are You an Agency, Labor Contractor, or Manpower Supplier?
-              </h3>
-              <p className="mt-2 text-zinc-400 tracking-wide leading-relaxed text-sm">
-                Looking for Leads and Projects?
-              </p>
-              <p className="mt-1 text-zinc-400 tracking-wide leading-relaxed text-sm">
-                Register with Us for Free!
-              </p>
+              <div>
+                <h3 className="text-zinc-100 font-bold tracking-wide">
+                  Are You an Agency, Labor Contractor, or Manpower Supplier?
+                </h3>
+                <p className="mt-2 text-zinc-400 tracking-wide leading-relaxed text-sm">
+                  Looking for Leads and Projects?
+                </p>
+                <p className="mt-1 text-zinc-400 tracking-wide leading-relaxed text-sm">
+                  Register with Us for Free!
+                </p>
+              </div>
+
               <Link href="https://docs.google.com/forms/d/e/1FAIpQLScwGOyRkdaM1uLzvwLxxeudg3kGAhb2XBFvrFAD5hrK1jHLbg/viewform">
                 <button className="mt-3 bg-[rgb(79,70,229)] py-1 px-2 rounded">
                   REGISTER NOW FOR FREE

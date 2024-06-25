@@ -2,6 +2,10 @@ import dynamic from "next/dynamic";
 
 import Link from "next/link";
 import MagicButton from "./components/ui/MagicButton";
+import { ImInstagram } from "react-icons/im";
+import { FaFacebook } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { LiaLinkedin } from "react-icons/lia";
 
 const Services = dynamic(() => import("./components/Services"), {
   loading: () => (
@@ -38,9 +42,9 @@ const Contact = dynamic(() => import("./components/Contact"), {
 export default function Home() {
   return (
     <main className="dark">
-      <section
+      <header
         id="above-the-fold"
-        className="bg-[#00000060] bg-[url('/hero-bg.webp')] bg-center bg-no-repeat min-h-[600px] bg-cover bg-blend-multiply flex items-center transition-all"
+        className="bg-[#00000080] bg-[url('/hero-bg.webp')] bg-center bg-no-repeat min-h-[600px] bg-cover bg-blend-multiply flex items-center transition-all"
       >
         <div className="max-w-7xl w-full m-auto text-white px-4">
           <div className="flex flex-col items-center">
@@ -60,7 +64,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </section>
+      </header>
 
       <section id="services" className="bg-gray-900 lg:px-6 px-4 py-8 lg:py-16">
         <Services />
@@ -77,6 +81,48 @@ export default function Home() {
       <section id="contact" className="bg-gray-950 lg:px-6 px-4 py-8 lg:py-16">
         <Contact />
       </section>
+
+      <footer className="bg-gray-900 lg:px-6 px-4 py-4">
+        <div className="max-w-screen-xl mx-auto md:flex justify-between items-center">
+          <p className="text-sm leading-[1.6] text-gray-100 font-normal">
+            © 2024 Daily Labour Hub (OPC) Pvt Ltd. All Rights Reserved.
+          </p>
+
+          <p className="text-sm leading-[1.6] text-gray-100 font-normal md:mt-0 mt-6">
+            Designed & Developed by Yahya Shareef
+            <span className="flex gap-3 mt-3 md:mx-auto max-w-fit">
+              <Link
+                className="bg-[rgb(79,70,229)] p-2 rounded"
+                href="https://x.com/shareef_yahya1"
+                aria-label="Yahya Shareef Twitter"
+              >
+                <FaXTwitter />
+              </Link>
+              <Link
+                className="bg-[rgb(79,70,229)] p-2 rounded"
+                href="https://linkedin.com/in/yahiya-shareef/"
+                aria-label="Yahya Shareef LinkedIn"
+              >
+                <LiaLinkedin />
+              </Link>
+              <Link
+                className="bg-[rgb(79,70,229)] p-2 rounded"
+                href="https://instagram.com/yahya_shareef1/"
+                aria-label="Yahya Shareef Instagram"
+              >
+                <ImInstagram />
+              </Link>
+              <Link
+                className="bg-[rgb(79,70,229)] p-2 rounded"
+                href="https://facebook.com/profile.php?id=61558586026851"
+                aria-label="Yahya Shareef Facebook"
+              >
+                <FaFacebook />
+              </Link>
+            </span>
+          </p>
+        </div>
+      </footer>
     </main>
   );
 }
