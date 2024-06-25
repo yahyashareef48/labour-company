@@ -3,12 +3,12 @@ import { FaRegLightbulb } from "react-icons/fa";
 import { TbClockCheck } from "react-icons/tb";
 import { FaHelmetSafety } from "react-icons/fa6";
 import { BiNetworkChart } from "react-icons/bi";
-import Link from "next/link";
-import MagicButton from "./ui/MagicButton";
+import { PiHandshake } from "react-icons/pi";
+import { IoShieldCheckmarkOutline } from "react-icons/io5";
 
 export default function AboutUs() {
   return (
-    <div className="lg:px-6 px-4 py-8 lg:py-16">
+    <div>
       <h2 className="mb-4 text-4xl tracking-tight text-center font-extrabold text-gray-900 dark:text-white">
         About <span className="text-[#ffe101]">Labour</span> Company
       </h2>
@@ -39,10 +39,22 @@ const WhyChooseUsPoints = [
     icon: <FaRegLightbulb />,
   },
   {
+    title: "Comprehensive Solutions",
+    description:
+      "From civil contractors to sub-contractors and labor contractors, our extensive network covers all your workforce needs.",
+    icon: <BiNetworkChart />,
+  },
+  {
     title: "Reliability",
     description:
       "Count on us for dependable manpower that meets your project's demands efficiently and on time.",
     icon: <TbClockCheck />,
+  },
+  {
+    title: "Quality Assurance",
+    description:
+      "We ensure the highest standards of quality in every project. Our rigorous selection process and continuous training programs guarantee that our workers deliver superior performance.",
+    icon: <IoShieldCheckmarkOutline />,
   },
   {
     title: "Safety First",
@@ -50,10 +62,11 @@ const WhyChooseUsPoints = [
       "We prioritize safety by equipping our workers with multicolored safety construction hats and adhering to strict safety protocols.",
     icon: <FaHelmetSafety />,
   },
+
   {
-    title: "Comprehensive Solutions",
+    title: "Customer-Centric Approach",
     description:
-      "From civil contractors to sub-contractors and labor contractors, our extensive network covers all your workforce needs.",
-    icon: <BiNetworkChart />,
+      "Your satisfaction is our priority. We work closely with you to understand your specific requirements and provide tailored solutions that align with your project goals.",
+    icon: <PiHandshake />,
   },
 ];
