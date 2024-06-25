@@ -42,9 +42,11 @@ export default function Contact() {
               <p className="mt-1 text-zinc-400 tracking-wide leading-relaxed text-sm">
                 No Registration Charges. It's Free!
               </p>
-              <button className="mt-3 bg-[rgb(79,70,229)] py-1 px-2 rounded">
-                REGISTER NOW FOR FREE
-              </button>
+              <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdYf3CBFcNRKmTxEORQsgw01HQwE80_gWwRxlXunp2QMVRNYQ/viewform?usp=send_form">
+                <button className="mt-3 bg-[rgb(79,70,229)] py-1 px-2 rounded">
+                  REGISTER NOW FOR FREE
+                </button>
+              </Link>
             </div>
 
             <div className="rounded-2xl w-full p-6 overflow-hidden bg-gray-800">
@@ -57,9 +59,11 @@ export default function Contact() {
               <p className="mt-1 text-zinc-400 tracking-wide leading-relaxed text-sm">
                 Register with Us for Free!
               </p>
-              <button className="mt-3 bg-[rgb(79,70,229)] py-1 px-2 rounded">
-                REGISTER NOW FOR FREE
-              </button>
+              <Link href="https://docs.google.com/forms/d/e/1FAIpQLScwGOyRkdaM1uLzvwLxxeudg3kGAhb2XBFvrFAD5hrK1jHLbg/viewform">
+                <button className="mt-3 bg-[rgb(79,70,229)] py-1 px-2 rounded">
+                  REGISTER NOW FOR FREE
+                </button>
+              </Link>
             </div>
           </div>
 
@@ -143,6 +147,7 @@ export default function Contact() {
                   CIE, Vindhya C4, IIITH Campus, Gachibowli, Hyderabad, Telangana: 500032
                 </p>
                 <iframe
+                  title="google maps of labour.company"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7612.785870319268!2d78.34324794135162!3d17.44089733382146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb939bb620f75f%3A0xd02a4507e09ce8bb!2sLABOUR%20COMPANY!5e0!3m2!1sen!2sin!4v1719332912277!5m2!1sen!2sin"
                   loading="lazy"
                   className="mt-3 w-full aspect-video rounded-xl"
