@@ -6,6 +6,7 @@ import { ImInstagram } from "react-icons/im";
 import { FaFacebook } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { LiaLinkedin } from "react-icons/lia";
+import Navbar from "./components/Navbar";
 
 const Services = dynamic(() => import("./components/Services"), {
   loading: () => (
@@ -42,6 +43,8 @@ const Contact = dynamic(() => import("./components/Contact"), {
 export default function Home() {
   return (
     <main className="dark">
+      <Navbar />
+
       <header
         id="above-the-fold"
         className="bg-[#00000080] bg-[url('/hero-bg.webp')] bg-center bg-no-repeat min-h-[600px] bg-cover bg-blend-multiply flex items-center transition-all"
