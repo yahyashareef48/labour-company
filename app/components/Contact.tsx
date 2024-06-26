@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaFacebook } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { ImInstagram } from "react-icons/im";
@@ -9,6 +9,11 @@ import { ImInstagram } from "react-icons/im";
 export default function Contact() {
   const [emailCopied, setEmailCopied] = useState(false);
   const [numberCopied, setNumberCopied] = useState(false);
+  const [hydrated, setHydrated] = useState(false);
+
+  useEffect(() => {
+    setHydrated(true);
+  }, []);
 
   const copyText = (textToCopy: string) => {
     navigator.clipboard.writeText(textToCopy).catch((err) => {
@@ -99,11 +104,15 @@ export default function Contact() {
               <div className="rounded-2xl w-full p-6 overflow-hidden bg-gray-800">
                 <h3 className="text-zinc-100 font-bold tracking-wide">Email Us</h3>
                 <p className="mt-1 text-zinc-400 tracking-wide leading-relaxed text-sm">
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: 'contact@<span className="text-[#ffe101]">labour</span>.company',
-                    }}
-                  />
+                  {hydrated ? (
+                    <>
+                      contact
+                      <span className="text-[#ffe101]">@labour</span>
+                      .company
+                    </>
+                  ) : (
+                    "contact@labour.company"
+                  )}
                 </p>
 
                 <button
