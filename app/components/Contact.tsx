@@ -78,6 +78,25 @@ export default function Contact() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="flex flex-col gap-4">
               <div className="rounded-2xl w-full p-6 overflow-hidden bg-gray-800">
+                <h3 className="text-zinc-100 font-bold tracking-wide">Call Us</h3>
+                <p className="mt-1 text-zinc-400 tracking-wide leading-relaxed text-sm">
+                  +91 8019322468
+                </p>
+                <button
+                  className="mt-3 bg-[rgb(79,70,229)] py-1 px-2 rounded"
+                  onClick={() => {
+                    copyText("+91 8019322468");
+                    setNumberCopied(true);
+                    setTimeout(() => {
+                      setNumberCopied(false);
+                    }, 5000);
+                  }}
+                >
+                  {numberCopied ? "Number Copied" : "Copy Number"}
+                </button>
+              </div>
+
+              <div className="rounded-2xl w-full p-6 overflow-hidden bg-gray-800">
                 <h3 className="text-zinc-100 font-bold tracking-wide">Email Us</h3>
                 <p className="mt-1 text-zinc-400 tracking-wide leading-relaxed text-sm">
                   contact@<span className="text-[#ffe101]">labour</span>.company
@@ -95,6 +114,7 @@ export default function Contact() {
                   {emailCopied ? "Email Copied" : "Copy Email"}
                 </button>
               </div>
+
               <div className="rounded-2xl w-full p-6 max-h-fit overflow-hidden bg-gray-800">
                 <h3 className="text-zinc-100 font-bold tracking-wide">
                   Connect with Us on Social Media
@@ -128,35 +148,17 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="flex flex-col gap-4">
-              <div className="rounded-2xl w-full p-6 overflow-hidden bg-gray-800">
-                <h3 className="text-zinc-100 font-bold tracking-wide">Call Us</h3>
-                <p className="mt-1 text-zinc-400 tracking-wide leading-relaxed text-sm">
-                  +91 8019322468
-                </p>
-                <button
-                  className="mt-3 bg-[rgb(79,70,229)] py-1 px-2 rounded"
-                  onClick={() => {
-                    copyText("+91 8019322468");
-                    setNumberCopied(true);
-                    setTimeout(() => {
-                      setNumberCopied(false);
-                    }, 5000);
-                  }}
-                >
-                  {numberCopied ? "Number Copied" : "Copy Number"}
-                </button>
-              </div>
-              <div className="rounded-2xl w-full p-6 overflow-hidden bg-gray-800">
-                <h3 className="text-zinc-100 font-bold tracking-wide">Visit Our Office</h3>
-                <p className="mt-1 text-zinc-400 tracking-wide leading-relaxed text-sm">
-                  CIE, Vindhya C4, IIITH Campus, Gachibowli, Hyderabad, Telangana: 500032
-                </p>
+            <div className="rounded-2xl w-full p-6 overflow-hidden bg-gray-800 flex flex-col">
+              <h3 className="text-zinc-100 font-bold tracking-wide">Visit Our Office</h3>
+              <p className="mt-1 text-zinc-400 tracking-wide leading-relaxed text-sm">
+                CIE, Vindhya C4, IIITH Campus, Gachibowli, Hyderabad, Telangana: 500032
+              </p>
+              <div className="flex-grow mt-3">
                 <iframe
                   title="google maps of labour.company"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7612.785870319268!2d78.34324794135162!3d17.44089733382146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb939bb620f75f%3A0xd02a4507e09ce8bb!2sLABOUR%20COMPANY!5e0!3m2!1sen!2sin!4v1719332912277!5m2!1sen!2sin"
                   loading="lazy"
-                  className="mt-3 w-full aspect-video rounded-xl"
+                  className="w-full h-full aspect-video rounded-xl"
                 ></iframe>
               </div>
             </div>
