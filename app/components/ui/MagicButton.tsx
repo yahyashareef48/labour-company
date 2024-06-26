@@ -20,7 +20,7 @@ export default function MagicButton({
     >
       <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#fde47c_0%,#fce98c_50%,#fca03c_100%)]"></span>
       <span
-        className={`inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-gray-800 px-7 py-1 text-sm font-medium text-white backdrop-blur-3xl ${className}`}
+        className={`inline-flex z-10 h-full w-full cursor-pointer items-center justify-center rounded-lg bg-gray-800 px-7 py-1 text-sm font-medium text-white backdrop-blur-3xl ${className}`}
       >
         {position === "left" && icon}
         {title}

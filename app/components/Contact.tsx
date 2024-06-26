@@ -99,8 +99,13 @@ export default function Contact() {
               <div className="rounded-2xl w-full p-6 overflow-hidden bg-gray-800">
                 <h3 className="text-zinc-100 font-bold tracking-wide">Email Us</h3>
                 <p className="mt-1 text-zinc-400 tracking-wide leading-relaxed text-sm">
-                  contact@<span className="text-[#ffe101]">labour</span>.company
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: 'contact@<span className="text-[#ffe101]">labour</span>.company',
+                    }}
+                  />
                 </p>
+
                 <button
                   className="mt-3 bg-[rgb(79,70,229)] py-1 px-2 rounded"
                   onClick={() => {

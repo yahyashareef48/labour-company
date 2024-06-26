@@ -90,7 +90,7 @@ export default function Home() {
 
           <p className="text-sm leading-[1.6] text-gray-100 font-normal md:mt-0 mt-6">
             Designed & Developed by Yahya Shareef
-            <span className="flex gap-3 mt-3 md:mx-auto max-w-fit">
+            <span className="flex gap-4 mt-3 md:mx-auto max-w-fit">
               <Link
                 className="bg-[rgb(79,70,229)] p-2 rounded"
                 href="https://x.com/shareef_yahya1"
