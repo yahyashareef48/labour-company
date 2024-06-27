@@ -46,7 +46,7 @@ export default function Navbar() {
             </li>
             <li>
               <Link href="#contact">
-                <MagicButton title="Contact Us" btnClassName="mt-0" />
+                <MagicButton title="Contact Us" />
               </Link>
             </li>
           </ul>
@@ -58,14 +58,17 @@ export default function Navbar() {
           </button>
 
           {isNavOpen && (
-            <ul className="bg-[#030712] text-center w-full absolute left-0 top-[77px] flex flex-col p-4">
+            <ul
+              className="bg-[#030712] text-center w-full absolute left-0 top-[77px] flex flex-col gap-6 p-4"
+              onClick={() => setIsNavOpen(false)}
+            >
               <li>
                 <Link href="#services">Services</Link>
               </li>
-              <li className="mt-6">
+              <li>
                 <Link href="#about-us">About Us</Link>
               </li>
-              <li className="mt-6">
+              <li>
                 <Link href="#reviews">Testimonials</Link>
               </li>
               <li>

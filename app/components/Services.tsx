@@ -243,7 +243,7 @@ export default function Services() {
       </div>
 
       <div className="flex justify-center lg:my-6 my-4">
-        <Link href="#contact" className="w-full md:w-60">
+        <Link href="#contact" className="w-full md:w-60 mt-6">
           <MagicButton title="Contact Us" />
         </Link>
       </div>

@@ -16,7 +16,7 @@ export default function MagicButton({
   return (
     <button
       onClick={onClick}
-      className={`relative inline-flex h-12 w-full overflow-hidden rounded-lg p-[1.5px] focus:outline-none md:w-60 mt-6 ${btnClassName}`}
+      className={`relative inline-flex h-12 w-full overflow-hidden rounded-lg p-[1.5px] focus:outline-none md:w-60 ${btnClassName}`}
     >
       <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#fde47c_0%,#fce98c_50%,#fca03c_100%)]"></span>
       <span

@@ -62,7 +62,7 @@ export default function Home() {
               you get the right people for the job, improving productivity and meeting your project
               deadlines.
             </p>
-            <Link href="#contact" className="w-full md:w-60">
+            <Link href="#contact" className="w-full md:w-60 mt-6">
               <MagicButton title="Contact Us" />
             </Link>
           </div>
